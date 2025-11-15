@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Title for the new course -->
+    <title>ENR 355 Robotics and Sensors</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font as the default sans-serif font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the details marker */
+        summary {
+            cursor: pointer;
+            display: flex; /* Use flexbox for layout */
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center; /* Vertically center items */
+            list-style-type: none; /* Force-remove the default marker */
+            /* Match card header styling */
+            font-size: 1.5rem; /* 2xl */
+            font-weight: 600; /* semibold */
+            padding: 1.5rem; /* p-6 */
+            color: #f3f4f6; /* text-gray-100 for dark mode */
+        }
+        summary:hover {
+            background-color: #374151; /* bg-gray-700 for dark mode */
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        /* Changed to ::before to position it on the left */
+        details > summary::before {
+            content: '›'; /* Changed icon to a chevron */
+            margin-right: 0.75rem; /* Add space on the right (was margin-left) */
+            font-size: 0.8em; /* Made the icon larger (was 0.6em) */
+            transition: transform 0.2s;
+            display: inline-block;
+            /* vertical-align and top are no longer needed with flexbox */
+            font-weight: bold; /* Added bold to make it clear */
+        }
+        /* Changed to ::before */
+        details[open] > summary::before {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<!-- Updated body for dark mode -->
+<body class="bg-gray-900 text-gray-200">
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Main Title Card -->
+        <!-- Updated card for dark mode and background image -->
+        <div class="relative bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden mb-6">
+            
+            <!-- Background Image -->
+            <!-- We use an img tag for better control (e.g., object-cover) and accessibility -->
+            <img src="https://source.unsplash.com/1000x300/?robotics,technology,circuit" 
+                 alt="Robotics circuit background" 
+                 class="absolute inset-0 w-full h-full object-cover z-0"
+                 onerror="this.style.display='none'">
+            
+            <!-- Dark Overlay -->
+            <!-- This sits on top of the image (z-10) but below the content (z-20) -->
+            <!-- The backdrop-blur-sm adds a nice subtle blur effect to the background -->
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-60 backdrop-blur-sm z-10"></div>
+
+            <!-- Content (must be relative and z-20 to sit on top) -->
+            <div class="relative z-20 p-6">
+                <div class="flex items-center space-x-4 mb-4">
+                    <!-- Placeholder for Coe College Logo -->
+                    <img class="h-16 w-16 rounded-full" 
+                         src="https://placehold.co/64x64/B91C1C/FFFFFF?text=COE" 
+                         alt="Coe College Logo"
+                         onerror="this.src='https://placehold.co/64x64/B91C1C/FFFFFF?text=COE'">
+                    <div>
+                        <!-- Updated text color for dark mode -->
+                        <h1 class="text-3xl font-bold text-white">ENR 355: Robotics and Sensors</h1>
+                        <p class="text-lg text-gray-300">Department of Engineering Physics, Coe College | Cedar Rapids, Iowa</p>
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4">
+                    <!-- Updated button hover for dark mode -->
+                    <a href="#" 
+                       class="inline-block bg-red-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-600 transition-colors shadow">
+                       Download Full Syllabus (PDF)
+                    </a>
+                    <!-- Updated button hover for dark mode -->
+                    <a href="https://coewinmoodle.coe.edu/moodle/course/section.php?id=73749" 
+                       class="inline-block bg-sky-800 text-white font-semibold px-6 py-3 rounded-lg hover:bg-sky-700 transition-colors shadow">
+                       Upload Assignments to Moodle
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Left Column (Main Info) -->
+            <div class="lg:col-span-2 space-y-6">
+
+                <!-- Course Description Card - UPDATED -->
+                <!-- Updated card for dark mode -->
+                <details class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden" open>
+                    <summary>Course Description</summary>
+                    <!-- Updated text for dark mode -->
+                    <div class="p-6 pt-0 space-y-4 text-gray-300">
+                        <p class="italic">
+                            "In Nov 3 2025, the New York Times reported that Amazon is planning to replace 75% of its human workforce with robotics and automation, ETA 2033, enough said?"
+                        </p>
+                        <p>
+                            ENR 355 serves as an introductory course to mechatronics. A good robotic application is just like any other automation: it is the system integration of mechanical, electrical, computer hardware and software.
+                        </p>
+                        <p>
+                            If you have done grade-school robotics and played with Lego before, it won’t be hard to put things together and make it move; and it won’t be hard to power the movements with a motor. In this class, we are going to study what is under the hood: what is the design, math, signal and code to make movements with controls. When other kids are still fine-tuning each turning and steps manually, we can actually save lots of time by letting the bots figure it out themselves with sensors, feedback loops and computation.
+                        </p>
+                        <p>
+                            Thanks to the maker culture, it is now possible to perform any robotic tasks with commercial-grade hardware and open-sourced software support. I have no doubt if you can learn how to build a servo/motor-sensor-control system in this class, you will have no issue working with, or even develop R&D or industrial robots in the future.
+                        </p>
+                    </div>
+                </details>
+
+             <!-- Milestones Card - NEW -->
+                <!-- Updated card for dark mode -->
+                <details class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden" open>
+                    <summary>Major Milestones</summary>
+                    <div class="p-6 pt-0">
+                        <!-- Updated text for dark mode -->
+                        <p class="text-gray-300 mb-4">The lectures and knowledge base will be delivered based on the three major milestones:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                            <li><span class="font-semibold text-gray-100">3RPS parallel manipulator</span> with stepper motor and position sensor.</li>
+                            <li><span class="font-semibold text-gray-100">Micromouse:</span> Based on the classic maze-solving small wheeled robots since 1977.</li>
+                            <li><span class="font-semibold text-gray-100">JPL open-source rover:</span> We are going to assemble the brain, the body and the control system.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Lecture Slides & Resources Card - NEW -->
+                <details class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden" open>
+                    <summary>Lecture Slides & Resources</summary>
+                    <div class="p-6 pt-0 space-y-4">
+                        
+                        <!-- Milestone 1 -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-100">Milestone 1: 3RPS Parallel Manipulator</h3>
+                            <div class="flex flex-wrap items-center space-x-4 mt-2">
+                                <span class="font-medium text-gray-300 w-32 shrink-0">Lec 1.1:</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Slides]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Resources]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Assignment]</a>
+                            </div>
+                            <!-- Add more links as needed -->
+                        </div>
+            
+                        <!-- Milestone 2 -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-100 mt-4">Milestone 2: Micromouse</h3>
+                            <div class="flex flex-wrap items-center space-x-4 mt-2">
+                                <span class="font-medium text-gray-300 w-32 shrink-0">Lec 2.1:</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Slides]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Resources]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Assignment]</a>
+                            </div>
+                            <!-- Add more links as needed -->
+                        </div>
+            
+                        <!-- Milestone 3 -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-100 mt-4">Milestone 3: JPL Open-Source Rover</h3>
+                            <div class="flex flex-wrap items-center space-x-4 mt-2">
+                                <span class="font-medium text-gray-300 w-32 shrink-0">Lec 3.1:</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Slides]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Resources]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Assignment]</a>
+                            </div>
+                            <!-- Add more links as needed -->
+                        </div>
+            
+                        <!-- Hands-on Sessions -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-100 mt-4">Hands-on Sessions</h3>
+                            <div class="flex flex-wrap items-center space-x-4 mt-2">
+                                <span class="font-medium text-gray-300 w-32 shrink-0">Lab 1 (CAD):</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
+                            </div>
+                             <div class="flex flex-wrap items-center space-x-4 mt-2">
+                                <span class="font-medium text-gray-300 w-32 shrink-0">Lab 2 (Printing):</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
+                            </div>
+                             <div class="flex flex-wrap items-center space-x-4 mt-2">
+                                <span class="font-medium text-gray-300 w-32 shrink-0">Lab 3 (Soldering):</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
+                            </div>
+                            <!-- Add more links as needed -->
+                        </div>
+            
+                    </div>
+                </details>
+
+                <!-- Grading & AI Policy Card -->
+                <!-- Updated card for dark mode -->
+                <details id="grading" class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden">
+                    <summary>Course Philosophy</summary>
+                    <div class="p-6 pt-0 space-y-4">
+                        <div>
+                            <!-- Updated text for dark mode -->
+                            <h3 class="text-lg font-semibold text-gray-100">Grading: The Learning Loop</h3>
+                            <p class="text-gray-300">
+                                This course uses a mastery-based "learning loop." There is no partial credit. Assignments are evaluated as 
+                                <!-- Updated spans for dark mode -->
+                                <span class="font-medium bg-green-900 text-green-200 px-2 py-0.5 rounded">Exemplary</span>, 
+                                <span class="font-medium bg-blue-900 text-blue-200 px-2 py-0.5 rounded">Success</span>, or 
+                                <span class="font-medium bg-yellow-900 text-yellow-200 px-2 py-0.5 rounded">Retry</span>. 
+                                The goal is to try, make mistakes, reflect, revise, and try again—without penalty for mistakes, as long as you demonstrate growth.
+                            </p>
+                        </div>
+                        <div>
+                            <!-- Updated text for dark mode -->
+                            <h3 class="text-lg font-semibold text-gray-100">Tokens</h3>
+                            <p class="text-gray-300">
+                                You will start with <span class="font-bold text-gray-100">5 tokens</span>. One token can be spent to get a 36-hour deadline extension or to retry an assignment a second time (a third submission).
+                            </D>
+                        </div>
+                        <div>
+                            <!-- Updated text for dark mode -->
+                            <h3 class="text-lg font-semibold text-gray-100">AI Policy: "Roller Skates, Not Crutches"</h3>
+                            <p class="text-gray-300">
+                                AI tools (like ChatGPT or Copilot) are permitted as long as they support your learning and do not replace your independent thought. All AI-generated content (code or text) must be clearly cited and labeled.
+                            </p>
+                        </div>
+                    </div>
+                </details>
+        
+              <!-- Instructor Info Card -->
+                  <!-- Updated card for dark mode -->
+                  <details id="instructor" class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden">
+                    <summary>About me</summary>
+                    <div class="p-6 pt-0 space-y-2">
+                        <!-- Updated text for dark mode -->
+                        <h3 class="text-xl font-semibold mb-2 text-white">Xiang Li</h3>
+                        <p class="text-gray-300"><strong>Email:</strong> <a href="mailto:xili@coe.edu" class="text-sky-400 hover:text-sky-300 hover:underline">xili@coe.edu</a></p>
+                        <p class="text-gray-300"><strong>Office:</strong> Peterson Hall 141 </p>
+                        <p class="text-gray-300"><strong>Office Hours:</strong> Monday and Wednesday 9:30am-12:00pm, Monday and Tuesday 1:00pm-3:00pm</p>
+                    
+                         <p class="text-gray-300 mt-2">
+                          <strong>Schedule a Meeting:</strong> 
+                          <a href="https://calendar.app.google/nCTnYKLDLuLEDQzi9" target="_blank" class="text-sky-400 hover:text-sky-300 hover:underline">
+                            Book a Time Slot
+                          </a>
+                    </p>
+                    </div>
+                </details>
+
+             <!-- Class Info Card - UPDATED -->
+                <!-- Updated card for dark mode -->
+                <details class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden" open>
+                     <!-- Moodle button moved to the top card -->
+                    <summary>Class Details</summary>
+                    <div class="p-6 pt-0 space-y-4">
+                        <div>
+                            <!-- Updated text for dark mode -->
+                            <p class="pt-6 text-gray-300 font-semibold">Lecture Section:</p>
+                            <ul class="list-disc list-inside text-gray-300">
+                                <li><span class="font-medium">Term:</span> Spring 2026 (1/14/2026 - 5/8/2026)</li>
+                                <li><span class="font-medium">ENR 355:</span> Tuesday and Thursday 9:00 AM - 9:50 AM</li>
+                                <li><span class="font-medium">Location:</span> HSC/Peterson 148</li>
+                            </ul>
+                        </div>
+                       
+                    </div>
+                </details>
+           </div>     
+            <!-- Right Column (Side Info) -->
+            <div class="lg:col-span-1 space-y-6">
+              
+                <!-- Useful links Card - UPDATED -->
+                <!-- Updated card for dark mode -->
+                <details class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden" open>
+                    <summary>Useful links:</summary>
+                      <div class="p-6 pt-3 space-y-2 ml-4 ">
+                        
+                          <li class="text-gray-300"> <a href="https://github.com/xlicoe/ENR355/" class="text-sky-400 hover:text-sky-300 hover:underline text-base">GitHub Repository (ENR 355)</a></li>
+                           
+                          <li class="text-gray-300"> <a href="https://xlicoe.github.io/klotski-state-space-tutorial/" class="text-sky-400 hover:text-sky-300 hover:underline text-base">Klotski State Space Tutorial</a></li>    
+                                
+                          <li class="text-gray-300"> <a href="https://www.instructables.com/Ball-Balancer/" class="text-sky-400 hover:text-sky-300 hover:underline text-base">Ball Balancer Example</a></li>
+                          
+                          <li class="text-gray-300"> <a href="https://johnthesong.wordpress.com/portfolio/118/" class="text-sky-400 hover:text-sky-300 hover:underline text-base">Portfolio Example</a></li>
+                          
+                          <li class="text-gray-300"> <a href="https://github.com/nasa-jpl/open-source-rover" class="text-sky-400 hover:text-sky-300 hover:underline text-base">JPL Open Source Rover</a></li>
+
+                          <li class="text-gray-300"> <a href="httpsa://learn.nvidia.com/courses/course?course_id=course-v1:DLI+S-OV-27+V1&unit=block-v1:DLI+S-OV-27+V1+type@vertical+block@70550dbe610a4cc0b56b7ad5d9abcf97" class="text-sky-400 hover:text-sky-300 hover:underline text-base">NVIDIA Course</a></li>
+                     </div>
+                </details>
+
+            </div>
+            
+    
+    </main>
+
+    <!-- Updated footer text for dark mode -->
+    <footer class="text-center text-gray-400 py-6">
+        <!-- Updated copyright year to 2026 from the syllabus -->
+        <p>&copy; 2026 Coe College. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
