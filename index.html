@@ -162,7 +162,7 @@
                     </div>
                 </details>
 
-                <!-- Lecture Slides & Resources Card - NEW -->
+                               <!-- Lecture Slides & Resources Card - NEW -->
                 <details class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 overflow-hidden" open>
                     <summary>Lecture Slides & Resources</summary>
                     <div class="p-6 pt-0 space-y-4">
@@ -170,8 +170,9 @@
                         <!-- Milestone 1 -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-100">Milestone 1: 3RPS Parallel Manipulator</h3>
-                            <div class="flex flex-wrap items-center space-x-4 mt-2">
-                                <span class="font-medium text-gray-300 w-32 shrink-0">Lec 1.1:</span>
+                            <!-- Grid Layout: 1 col on mobile, 4 defined cols on small screens and up -->
+                            <div class="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 items-center mt-2">
+                                <span class="font-medium text-gray-300">Lec 1.1:</span>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Slides]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Resources]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Assignment]</a>
@@ -182,8 +183,8 @@
                         <!-- Milestone 2 -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-100 mt-4">Milestone 2: Micromouse</h3>
-                            <div class="flex flex-wrap items-center space-x-4 mt-2">
-                                <span class="font-medium text-gray-300 w-32 shrink-0">Lec 2.1:</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 items-center mt-2">
+                                <span class="font-medium text-gray-300">Lec 2.1:</span>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Slides]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Resources]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Assignment]</a>
@@ -194,8 +195,8 @@
                         <!-- Milestone 3 -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-100 mt-4">Milestone 3: JPL Open-Source Rover</h3>
-                            <div class="flex flex-wrap items-center space-x-4 mt-2">
-                                <span class="font-medium text-gray-300 w-32 shrink-0">Lec 3.1:</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 items-center mt-2">
+                                <span class="font-medium text-gray-300">Lec 3.1:</span>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Slides]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Resources]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Assignment]</a>
@@ -206,18 +207,19 @@
                         <!-- Hands-on Sessions -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-100 mt-4">Hands-on Sessions</h3>
-                            <div class="flex flex-wrap items-center space-x-4 mt-2">
-                                <span class="font-medium text-gray-300 w-42 shrink-0">Lab 1 (CAD):</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 items-center mt-2">
+                                <span class="font-medium text-gray-300">Lab 1 (CAD):</span>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
+                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
+                                <!-- Empty div to maintain grid structure if needed, or just leave it out and grid handles it -->
+                            </div>
+                             <div class="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 items-center mt-2">
+                                <span class="font-medium text-gray-300">Lab 2 (Printing):</span>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
                             </div>
-                             <div class="flex flex-wrap items-center space-x-4 mt-2">
-                                <span class="font-medium text-gray-300 w-42 shrink-0">Lab 2 (Printing):</span>
-                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
-                                <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
-                            </div>
-                             <div class="flex flex-wrap items-center space-x-4 mt-2">
-                                <span class="font-medium text-gray-300 w-42 shrink-0">Lab 3 (Soldering):</span>
+                             <div class="grid grid-cols-1 sm:grid-cols-[1.5fr_1fr_1fr_1fr] gap-4 items-center mt-2">
+                                <span class="font-medium text-gray-300">Lab 3 (Soldering):</span>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Tutorial]</a>
                                 <a href="#" class="text-sky-400 hover:text-sky-300 hover:underline text-sm">[Files]</a>
                             </div>
