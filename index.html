@@ -7,6 +7,16 @@
     <title>ENR 355 Robotics and Sensors</title>
     <!-- Import Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- If Tailwind CSS ofline, use local stored js script -->
+ <script>
+   if (typeof tailwind === 'undefined') {
+     console.log('Internet/CDN is down. Loading local Tailwind...');
+     document.write('<script src="js/tailwind.js"><\/script>');
+   }
+ </script>
+
+
+    
     <!-- Import Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
